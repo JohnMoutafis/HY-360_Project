@@ -13,7 +13,7 @@
 		@mysql_connect($db_host, $db_username, $db_pass) or die ("Could not connect to MySQL...");
 	    //Connect to specific database
 		@mysql_select_db($db_base) or die ("No database");
-	
+		@mysql_query('SET NAMES utf8');
 		echo "Είστε συνδεδεμένος στην βάση δεδομένων: $db_base";
 	?>
 	<!--end-->
@@ -28,6 +28,7 @@
 	    <input type="submit" value="Ενημέρωση" name="update"/>
 	    <input type="submit" value="Αναζήτηση" name="query" />
 	</form>
+	
 </html>
 
 
