@@ -6,12 +6,12 @@
 	<?php
     	$db_host = "localhost";
 		$db_username = "root";
-		$db_pass = "331589";
+		$db_pass = "";
 		$db_base = "hy360";
 	
 		//Connect to SQL
 		@mysql_connect($db_host, $db_username, $db_pass) or die ("Could not connect to MySQL...");
-		//Connect to specific database
+	    //Connect to specific database
 		@mysql_select_db($db_base) or die ("No database");
 	
 		echo "Είστε συνδεδεμένος με την βάση δεδομένων: $db_base";
