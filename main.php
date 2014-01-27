@@ -14,19 +14,19 @@
 	    //Connect to specific database
 		@mysql_select_db($db_base) or die ("No database");
 	
-		echo "����� ������������ �� ��� ���� ���������: $db_base";
+		echo "Είστε συνδεδεμένος στην βάση δεδομένων: $db_base";
 	?>
 	<!--end-->
 	
 	<body>
 		<p>
-		    ��� �� ������� �� ���� ���� ����!!<br><br>
-			�� �� ������ �� ������;
+		     Εδώ θα βάλουμε το μπλά μπλά!!<br><br>
+			 Τι θέλετε να κάνετε;
 		</p>
 	</body>	
 	<form action="auxiliary_main_option_handler.php" method="post">
-	    <input type="submit" value="���������" name="update"/>
-	    <input type="submit" value="���������" name="query" />
+	    <input type="submit" value="Ενημέρωση" name="update"/>
+	    <input type="submit" value="Αναζήτηση" name="query" />
 	</form>
 </html>
 
