@@ -8,25 +8,25 @@
 		$db_username = "root";
 		$db_pass = "";
 		$db_base = "hy360";
-	
+		//comment
 		//Connect to SQL
 		@mysql_connect($db_host, $db_username, $db_pass) or die ("Could not connect to MySQL...");
 	    //Connect to specific database
 		@mysql_select_db($db_base) or die ("No database");
 	
-		echo "Είστε συνδεδεμένος με την βάση δεδομένων: $db_base";
+		echo "οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½ οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½: $db_base";
 	?>
 	<!--end-->
 	
 	<body>
 		<p>
-		    Έδώ θα βάλουμε το πολύ μπλα μπλα!!<br><br>
-			Τι θα θέλατε να κάνετε;
+		    οΏ½οΏ½οΏ½ οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½!!<br><br>
+			οΏ½οΏ½ οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½;
 		</p>
 	</body>	
 	<form action="auxiliary_main_option_handler.php" method="post">
-	    <input type="submit" value="Ενημέρωση" name="update"/>
-	    <input type="submit" value="Αναζήτηση" name="query" />
+	    <input type="submit" value="οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½" name="update"/>
+	    <input type="submit" value="οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½" name="query" />
 	</form>
 </html>
 
