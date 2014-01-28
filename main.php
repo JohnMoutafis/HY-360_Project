@@ -2,20 +2,24 @@
 	<title>HY-360 Project</title>
 	<head><h1>Test Head</h1></head>
 	
-	<!--Data Base connection via php-->
+	<!--Data Base connection via php and PDO function-->
 	<?php
     	$db_host = "localhost";
 		$db_username = "root";
 		$db_pass = "";
-		$db_base = "hy360";
-		//comment
+		$db_name = "hy360";
+		
 		//Connect to SQL
-		@mysql_connect($db_host, $db_username, $db_pass) or die ("Could not connect to MySQL...");
-	    //Connect to specific database
-		@mysql_select_db($db_base) or die ("No database");
-		@mysql_query('SET NAMES utf8');
-		echo "Είστε συνδεδεμένος στην βάση δεδομένων: $db_base";
-	?>
+	   try{
+	       $db = new PDO('mysql:host='.$db_host.';dbname'.$db_name,$db_username,$db_pass);
+           echo "Συνδεθήκατε επιτυχώς στη βάση δεδομένων: $db_name";
+		}catch(PDOException $e){
+		   echo "Could not connect to server or database. Server respond: " .$e->getMessage();
+           die;  
+		}
+		
+		$db->query('SET NAMES utf8');	
+	?> 
 	<!--end-->
 	
 	<body>
