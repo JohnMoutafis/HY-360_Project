@@ -14,14 +14,18 @@
 			@mysql_query('SET NAMES utf8');
 			$search1= $_POST["kivernisi"];	
 			if( $search1 != NULL ){
-				$result = mysql_query("SELECT υπουργός.Όνομα,χαρτοφυλάκιο.Όνομα_Υπουργού,χαρτοφυλάκιο.Κατηγορία 
-										FROM υπουργός INNER JOIN χαρτοφυλάκιο ON υπουργός.Όνομα=χαρτοφυλάκιο.Όνομα_Υπουργού
+				$result = mysql_query("SELECT υπουργός.Όνομα,χαρτοφυλάκιο.Όνομα_Υπουργού,χαρτοφυλάκιο.Κατηγορία,επάγγελμα_ατόμων.Όνομα_Ατόμου,επάγγελμα_ατόμων.Επάγγελμα
+										FROM υπουργός 
+											INNER JOIN χαρτοφυλάκιο 
+												ON υπουργός.Όνομα=χαρτοφυλάκιο.Όνομα_Υπουργού
+											LEFT JOIN επάγγελμα_ατόμων
+												ON χαρτοφυλάκιο.Όνομα_Υπουργού=επάγγελμα_ατόμων.Όνομα_Ατόμου
 				 							WHERE Όνομα_κυβέρνησης='".$search1."'") or die('Invalid query: ' . mysql_error());
 				echo "<table border='1'>
 					<tr><th>Όνομα Υπουργού</th><th>Επάγγελμα</th><th>Χαρτοφυλάκιο</th></tr>";
 					while($row = mysql_fetch_array($result)){
 						echo "<tr><td>".$row['Όνομα_Υπουργού']."</td>";
-						echo "<td>ΝΑ</td>";
+						echo "<td>".$row['Επάγγελμα']."</td>";
 						echo "<td>".$row['Κατηγορία']."</td></tr>";
 					}
 				echo "</table>";
