@@ -62,6 +62,24 @@
 				echo "<input type='submit'>";
 				echo"</form>";
 			?>
+			<h3>Περιφέρειες υπουργών κυβέρνησης: </h3>
+				<?php
+				echo"<form action='per_ip.php' method='post'>";
+
+				echo"<select name='kivernisi'>";
+					$result = mysql_query("SELECT * FROM κυβέρνηση");
+					if(!$result){
+						die('Invalid query: ' . mysql_error());
+					}
+					echo"<option selected='selected'> </option>";
+					while($row = mysql_fetch_array($result)){
+						echo"<option value=".$row['Όνομα_Κυβέρνησης'].">".$row['Όνομα_Κυβέρνησης']."</option>";
+					}	
+				echo"</select>";
+
+				echo "<input type='submit'>";
+				echo"</form>";
+			?>
 		<h3>Ποσόστωση</h3>
 		<form action="sel_for_percent.php" method="post">
 			<select name= 'posostosi'>
@@ -71,6 +89,12 @@
 				<option value="ΓΚ">Γυναικών ανα κόμμα</option>
 				<option value="ΓΠ">Γυναικών ανα περιφέρεια</option>
 			</select>
+			<input type='submit'>
+		</form>
+		
+		<h3>Υπουργοί με εππάγγελμα και χαρτοφυλάκιο στην ίδια κατηγορία</h3>
+		<form action="ip_kat.php" method="post">
+
 			<input type='submit'>
 		</form>
 	</body>
