@@ -12,9 +12,11 @@
 		    //Connect to specific database
 			@mysql_select_db($db_base) or die ("No database");
 			@mysql_query('SET NAMES utf8');
-			$search1= $_POST["περιφέρειες"];	
-			if(strcmp($search1,"Α")==0 || strcmp($search1,"Γ")==0){
-				$result = mysql_query("SELECT * FROM βουλευτής WHERE φύλο='".$search1."'") or die('Invalid query: ' . mysql_error());
+			$search= $_POST["choice"];	
+			echo $search;
+			echo strlen($search);
+			if(strcmp($search,"Α")==0 || strcmp($search,"Γ")==0){
+				$result = mysql_query("SELECT * FROM βουλευτής WHERE φύλο='".$search."'") or die('Invalid query: ' . mysql_error());
 				echo "<table border='1'>
 						<tr><th>Όνομα βουλευτή</th></tr>";
 				while($row = mysql_fetch_array($result)){
@@ -22,8 +24,20 @@
 				}
 				echo "</table>";
 			}			
-			else{	
-				$result = mysql_query("SELECT * FROM βουλευτής WHERE Εκλογική_περιφέρεια='".$search1."'") or die('Invalid query: ' . mysql_error());
+			else if(strcmp(substr($search, 2),"Π")==0){
+				$search=str_replace("Π", "", $search);	
+				echo $search;
+				$result = mysql_query("SELECT * FROM βουλευτής WHERE Εκλογική_περιφέρεια='".$search."'") or die('Invalid query: ' . mysql_error());
+				echo "<table border='1'>
+						<tr><th>Όνομα βουλευτή</th></tr>";
+				while($row = mysql_fetch_array($result)){
+					echo "<tr><td>".$row['Όνομα']."</td></tr>";
+				}
+				echo "</table>";
+			}
+			else if(strcmp(substr($search, 0),"Ε")==0){
+				str_replace("Ε", "", $search);	
+				$result = mysql_query("SELECT Όνομα_Ατόμου FROM επάγγελμα_ατόμων WHERE Επάγγελμα='".$search."'") or die('Invalid query: ' . mysql_error());
 				echo "<table border='1'>
 						<tr><th>Όνομα βουλευτή</th></tr>";
 				while($row = mysql_fetch_array($result)){

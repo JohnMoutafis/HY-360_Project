@@ -30,9 +30,7 @@
 			}
 			else{
 				echo "DOESNOT EXIST";
-			}
-
-				
+			}		
 		?>
 	</body>
 </html>

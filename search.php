@@ -16,26 +16,30 @@
 			echo"<form action='vouleutes.php' method='post'>";
 			if(strcmp($option,"περιφέρεια")==0){
 				
-				echo"<select name='περιφέρειες'>";
-				$result = mysql_query("SELECT * FROM βουλευτής");
-				if(!$result){
-					die('Invalid query: ' . mysql_error());
-				}
+				echo"<select name='choice'>";
+				$result = mysql_query("SELECT * FROM βουλευτής") or die('Invalid query: ' . mysql_error());
 				echo"<option selected='selected'> </option>";
 				while($row = mysql_fetch_array($result)){
-					echo"<option value=".$row['Εκλογική_περιφέρεια'].">".$row['Εκλογική_περιφέρεια']."</option>";
+					echo"<option value="."Π".$row['Εκλογική_περιφέρεια'].">".$row['Εκλογική_περιφέρεια']."</option>";
 				}	
-				echo"</select>";
 			}
-			if(strcmp($option,"φύλο")==0){
-				echo"<select name='περιφέρειες'>";
+			else if(strcmp($option,"φύλο")==0){
+				echo"<select name='choice'>";
 				echo"<option selected='selected'> </option>
 					<option value='Α'>A</option>
 					<option value='Γ'>Γ</option>";
-				echo"</select>";
 			}
-				echo "<input type='submit'>";
-				echo"</form>";
+			else if (strcmp($option,"επάγγελμα")==0){
+				echo"<select name='choice>'
+				<option selected='selected'> </option>";
+				$result=mysql_query("SELECT Όνομα FROM επάγγελμα") or die('Invalid query: ' . mysql_error());
+				while($row=mysql_fetch_array($result)){
+					echo"<option value="."Ε".$row['Όνομα'].">".$row['Όνομα']."</option>";
+				}
+			}
+			echo"</select>
+				<input type='submit'>
+				</form>";
 		?>
 	</body>
 
