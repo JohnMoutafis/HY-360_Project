@@ -13,33 +13,34 @@
 			@mysql_select_db($db_base) or die ("No database");
 			@mysql_query('SET NAMES utf8');
 			$option= $_POST["voul_sel"]; 
-			echo"<form action='vouleutes.php' method='post'>";
-			if(strcmp($option,"περιφέρεια")==0){
+			if($option){
+				echo"<form action='vouleutes.php' method='post'>
+						<select name='choice'>
+							<option selected='selected'> </option>";
+				if(strcmp($option,"περιφέρεια")==0){					
+					$result = mysql_query("SELECT DISTINCT Εκλογική_περιφέρεια FROM βουλευτής ORDER BY  Εκλογική_περιφέρεια") or die('Invalid query: ' . mysql_error());
 				
-				echo"<select name='choice'>";
-				$result = mysql_query("SELECT * FROM βουλευτής") or die('Invalid query: ' . mysql_error());
-				echo"<option selected='selected'> </option>";
-				while($row = mysql_fetch_array($result)){
-					echo"<option value="."Π".$row['Εκλογική_περιφέρεια'].">".$row['Εκλογική_περιφέρεια']."</option>";
-				}	
-			}
-			else if(strcmp($option,"φύλο")==0){
-				echo"<select name='choice'>";
-				echo"<option selected='selected'> </option>
-					<option value='Α'>A</option>
-					<option value='Γ'>Γ</option>";
-			}
-			else if (strcmp($option,"επάγγελμα")==0){
-				echo"<select name='choice>'
-				<option selected='selected'> </option>";
-				$result=mysql_query("SELECT Όνομα FROM επάγγελμα") or die('Invalid query: ' . mysql_error());
-				while($row=mysql_fetch_array($result)){
-					echo"<option value="."Ε".$row['Όνομα'].">".$row['Όνομα']."</option>";
+					while($row = mysql_fetch_array($result)){
+						echo"<option value="."Π".$row['Εκλογική_περιφέρεια'].">".$row['Εκλογική_περιφέρεια']."</option>";
+					}	
 				}
+				else if(strcmp($option,"φύλο")==0){
+						echo"<option value='Α'>A</option>
+							<option value='Γ'>Γ</option>";
+				}
+				else if (strcmp($option,"επάγγελμα")==0){
+					$result=mysql_query("SELECT Όνομα FROM επάγγελμα") or die('Invalid query: ' . mysql_error());
+					while($row=mysql_fetch_array($result)){
+						echo"<option value="."Ε".$row['Όνομα'].">".$row['Όνομα']."</option>";
+					}
+				}
+				echo"</select>
+					<input type='submit'>
+					</form>";
 			}
-			echo"</select>
-				<input type='submit'>
-				</form>";
+			else{
+				echo " DOES NOT EXIST ";
+			}
 		?>
 	</body>
 

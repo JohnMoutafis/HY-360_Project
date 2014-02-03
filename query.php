@@ -60,10 +60,10 @@
 				echo"</select>";
 
 				echo "<input type='submit'>";
-			echo"</form>";
-		?>
+				echo"</form>";
+			?>
 		<h3>Ποσόστωση</h3>
-		<form action="percentage.php" method="post">
+		<form action="sel_for_percent.php" method="post">
 			<select name= 'posostosi'>
 				<option selected='selected'></option>
 				<option value="ΑΚ">Άντρών ανα κόμμα</option>

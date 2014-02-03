@@ -16,19 +16,30 @@
 			@mysql_select_db($db_base) or die ("No database");
 			@mysql_query('SET NAMES utf8');
 			$option= $_POST["posostosi"];
-			if(strcmp($option,"ΑΚ")==0 || strcmp($option,"ΓΚ")==0){
-				echo "<form action='peracentage.php' method='post'>
-						<select name='komma'>
+			if($option){
+				echo "<form action='percentage.php' method='post'>
+						<select name='percent'>
 							<option selected=selected></option>";
-							
-				$result=mysql_query("SELECT Ονομασία FROM κόμμα");
-				while($row = mysql_fetch_array($result)){
-					echo "<option value=".$row['Ονομασία'].">".$row['Ονομασία']. "</option>";
+				if(strcmp($option,"ΑΚ")==0 || strcmp($option,"ΓΚ")==0){
+										
+					$result=mysql_query("SELECT Ονομασία FROM κόμμα");
+					while($row = mysql_fetch_array($result)){
+						echo "<option value=".$option.$row['Ονομασία'].">".$row['Ονομασία']. "</option>";
+					}			
 				}
+				else if(strcmp($option,"ΑΠ")==0 || strcmp($option,"ΓΠ")==0){
+					$result=mysql_query("SELECT DISTINCT Εκλογική_περιφέρεια FROM βουλευτής ORDER BY Εκλογική_περιφέρεια");
+					while($row = mysql_fetch_array($result)){
+						echo "<option value=".$option.$row['Εκλογική_περιφέρεια'].">".$row['Εκλογική_περιφέρεια']. "</option>";
+					}
+				}
+				
 				echo"	</select>
-					<input type='submit'>
-					</form>";
-					
+						<input type='submit'>
+						</form>";	
+			}
+			else{
+				echo " DOES NOT EXIST ";
 			}
 		 
 		?>
