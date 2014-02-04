@@ -1,9 +1,8 @@
 <?php
-    include_once("Connect/connect_to_database.php");
     if(isset($_POST['cases'])) {
         $case_value = $_POST['cases'];
         if($case_value=="B_P"){
-            echo "Βουλευτική Περίοδος";
+            include("b_p_update.html");
         }
         elseif($case_value=="Party"){
             echo "Κόμμα";
