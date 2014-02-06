@@ -5,7 +5,6 @@
         $start_date = $_POST['start_date'];
         $end_date = $_POST['end_date'];
 
-        $db->exec('USE hy360;');
         $q = "INSERT INTO βουλευτική_περίοδος VALUES (:title, :start_date, :end_date);";
         $query = $db->prepare($q);
         $result = $query->execute(array(
