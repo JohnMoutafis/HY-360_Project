@@ -5,7 +5,7 @@
             include("b_p_update.html");
         }
         elseif($case_value=="Party"){
-            include("party_update.php");
+            include("party_update.html");
         }
         elseif($case_value=="Con_Info"){
             echo "Πληροφορίες Βουλευτών";
