@@ -97,6 +97,10 @@
 
 			<input type='submit'>
 		</form>
+		<h3>Επερωτήσεις για την τρεχον εκλογική περίοδο</h3>
+		<form action="eperotiseis.php" method="post">
+			<input type='submit'>
+		</form>
 	</body>
 </html>
 	
