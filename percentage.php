@@ -32,7 +32,12 @@
 						$joinrow = mysql_fetch_array($joinresult);
 						$row=mysql_fetch_array($result);
 						
-						$percentage =$joinrow['count(*)']/$row['Αρ_Βουλευτών'];
+						if($row['Αρ_Βουλευτών']==0){
+							$percentage=0;
+						}
+						else{
+							$percentage =$joinrow['count(*)']/$row['Αρ_Βουλευτών'];
+						}
 						echo "<p>Το ποσοστο ".$gender." στο κόμμα ".$subject." ειναι :".$percentage."%!</p><br>";
 					}
 					else if(strcmp($kind,"Π")==0){
@@ -42,11 +47,14 @@
 						
 						$row=mysql_fetch_array($result);
 						$genrow = mysql_fetch_array($general_result);
-						
-						$percentage =$row['count(*)']/$genrow['count(*)'];
+						if($genrow['count(*)']==0){
+							$percentage=0;
+						}
+						else{
+							$percentage =$row['count(*)']/$genrow['count(*)'];
+						}
 						echo "<p>Το ποσοστο ".$gender." στην εκλογική περιφέρεια ".$subject." ειναι :".$percentage."%!</p><br>";
-					}
-					
+					}	
 				}
 				else{
 					echo " DOES NOT EXIST ";
