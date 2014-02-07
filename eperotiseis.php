@@ -1,5 +1,8 @@
 <html>
 	<title>Αναζήτηση επερωτήσεων</title>
+	<head>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+	</head>
 	<body>
 		<?php
 			$db_host = "localhost";

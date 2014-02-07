@@ -21,7 +21,9 @@
 ?>
 
 <html>
-    <head><h1>Επιλέξτε ποιά κατηγορία θέλετε να ενημερώσετε:</h1></head>
+    <head><h1>Επιλέξτε ποιά κατηγορία θέλετε να ενημερώσετε:</h1>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+	</head>
     <body>
         
         <br>

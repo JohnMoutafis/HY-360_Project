@@ -1,7 +1,9 @@
 
 	<html>
 		<title>Ποσόστωση βουλευτών</title>
-		<head></head>
+		<head>
+			<link rel="stylesheet" type="text/css" href="mystyle.css">
+		</head>
 		<div id="form" style="position:absolute;top:25%;left:35%;">
 		<body>
 			<?php

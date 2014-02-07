@@ -1,4 +1,7 @@
 <html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+	</head>
 <?php
     include("Connect/connect_to_database.php");
     if(!empty($_POST['name'])){

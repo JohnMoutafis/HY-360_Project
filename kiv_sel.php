@@ -1,5 +1,7 @@
 <html>
-	<head></head>
+	<head>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+	</head>
 	<body>
 		<div id="form" style="position:absolute;top:25%;left:35%;">
 		<?php

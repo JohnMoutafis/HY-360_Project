@@ -1,9 +1,11 @@
 <html>
 	<title>Επιλογή ποσόστωσης</title>
 	<head>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
 	</head>
 	<body>
 	<div id="form" style="position:absolute;top:25%;left:35%;">
+		<h3 style="text-align: center">Επιλέξτε Κόμμα</h3>
 		<?php
 			$db_host = "localhost";
 			$db_username = "root";

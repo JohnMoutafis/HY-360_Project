@@ -1,6 +1,8 @@
 <html>
 	<title>Αναζητήσεις</title>
-	<head></head>
+	<head>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+	</head>
 	
 	<body>
 	<?php
