@@ -1,6 +1,6 @@
 <?php
     include("Connect/connect_to_database.php");
-    if(isset($_POST['name']) && isset($_POST['party'])){
+    if(!empty($_POST['name']) && !empty($_POST['party']) && !empty($_POST['district'])){
         $name = $_POST['name'];
         $age = $_POST['age'];
         $gender = $_POST['gender'];
@@ -11,12 +11,18 @@
         $query = $db->prepare($q);
         $result = $query->execute(array(
             ":name"      => $name,
-            ":age"   => $age,
-            ":gender"       => $gender,
-            ":party"  => $party,
-            ":district"       => $district
+            ":age"       => $age,
+            ":gender"    => $gender,
+            ":party"     => $party,
+            ":district"  => $district
         ));
         
         echo "Ο νέος βουλευτής προστέθηκε επιτυχώς!";       
+    }
+    else{
+        echo "Δεν έχετε δώσει επαρκή στοιχεία για αυτή την ενημέρωση.<br>Πατήστε OK για να προσπαθήσετε ξανά";
+        echo '<form action="con_info_new.html">';
+        echo '<input type="submit" name="case_submit" value="OK">';
+        echo '</form>';
     }
 ?>
