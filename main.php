@@ -13,7 +13,7 @@
        		echo "Συνδεθήκατε επιτυχώς στη βάση δεδομένων: $db_name";
 		?>
 		<p>
-		     Εδώ θα βάλουμε το μπλά μπλά!!<br><br>
+		     Правда в том, коммунизм!!<br><br>
 			 Τι θέλετε να κάνετε;
 		</p>
 		<form action="auxiliary_main_option_handler.php" method="post">
