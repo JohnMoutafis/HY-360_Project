@@ -21,7 +21,7 @@
 		<h3 style="text-align: center">Αναζήτηση Υπουργών.</h3>
 		<h3 style="text-align: center">Επιλέξτε Βουλευτική Περίοδο </h3>
 		<?php
-				echo"<form action='gov_sel.php' method='post'>";
+				echo"<form action='gov_sel.php' method='post' style='text-align:center;'>";
 
 				echo"<select name='voul_periodos'>";
 					$result = mysql_query("SELECT * FROM βουλευτική_περίοδος");

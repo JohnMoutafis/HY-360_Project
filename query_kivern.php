@@ -21,7 +21,7 @@
 		<h3 style="text-align: center">Αναζήτηση Υπουργών.</h3>
 		<h3 style="text-align: center">Επιλέξτε Κυβέρνηση: </h3>
 		<?php
-				echo"<form action='kiv_sel.php' method='post'>";
+				echo"<form action='kiv_sel.php' method='post' style='text-align:center;'>";
 
 				echo"<select name='kivernisi'>";
 					$result = mysql_query("SELECT * FROM κυβέρνηση");
