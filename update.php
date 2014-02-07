@@ -21,9 +21,9 @@
 ?>
 
 <html>
-    <head></head>
+    <head><h1>Επιλέξτε ποιά κατηγορία θέλετε να ενημερώσετε:</h1></head>
     <body>
-        <h1>Επιλέξτε ποιά κατηγορία θέλετε να ενημερώσετε:</h1>
+        
         <br>
         <form action="update.php" method="post">
             <select name="cases" >
