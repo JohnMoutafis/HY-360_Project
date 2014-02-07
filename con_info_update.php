@@ -1,6 +1,6 @@
 <?php
     include("Connect/connect_to_database.php");
-    if (isset($_POST['name']) && !empty($_POST['name'])) {
+    if (!empty($_POST['name'])) {
         $name = strtoupper($_POST['name']);
         if(isset($_POST['age'])){
             $age = $_POST['age'];
@@ -32,5 +32,11 @@
         }
         
         echo "Η ενημέρωση έγινε επιτυχώς!";
-    } 
+    }
+    else {
+	    echo "Δεν έχετε δώσει σωστό όνομα, ή το όνομα δεν υπάρχει.<br>Πατήστε OK για να προσπαθήσετε ξανά";
+        echo '<form action="con_info_update.html">';
+        echo '<input type="submit" name="case_submit" value="OK">';
+        echo '</form>';
+    }
 ?>

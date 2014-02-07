@@ -11,10 +11,10 @@
             include("con_info.html");
         }
         elseif($case_value=="Gov"){
-            echo "Κυβέρνηση";
+            include("gov_info.html");
         }
         elseif ($case_value=="Per_Info") {
-            echo "Πληροφορίες Ατόμων";
+            include("person_info.html");
         }
     }
     
