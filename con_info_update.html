@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     <title>ΕΝΗΜΕΡΩΣΗ ΒΟΥΛΕΥΤΗ</title>
-    <head>ΕΝΗΜΕΡΩΣΗ ΒΟΥΛΕΥΤΗ
+    <head>
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
 	</head>
     <body>
-        <form action="con_info_update.php" method="post">
+        <div id="form" style="position:absolute;top:25%;left:25%;" >
+    		<h3 style="text-align:center">ΕΝΗΜΕΡΩΣΗ ΒΟΥΛΕΥΤΗ</h3>
+        <form action="con_info_update.php" method="post" style="text-align: center">
             Δώστε το όνομα το βουλευτή που θέλετε να ενημερώσετε: <input type="text" name="name"><br>
             Επιλέξτε από τα παρακάτω πεδία ποιά θέλετε να ενημερώσετε:<br>
             Ηλικία βουλευτή:  <input type="number" name="age"><br>
@@ -15,5 +17,6 @@
             Ημερομηνία Ανεξαρτητοποίησης: <input type="date" name="ind_date"><br>
             <input type="submit" name="case_submit" value="Submit">
         </form>
+        </div>
     </body>
 </html>

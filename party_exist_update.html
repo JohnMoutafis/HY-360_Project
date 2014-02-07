@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     <title>ΕΝΗΜΕΡΩΣΗ ΚΟΜΜΑΤΟΣ</title>
-    <head>ΕΝΗΜΕΡΩΣΗ ΚΟΜΜΑΤΟΣ
+    <head>
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
 	</head>
 	<body>
-        <form action="party_exist_update.php" method="post">
+		<div id="form" style="position:absolute;top:25%;left:25%;" >
+        	<h3 style="text-align:center">ΕΝΗΜΕΡΩΣΗ ΚΟΜΜΑΤΟΣ</h3>
+        <form action="party_exist_update.php" method="post" style="text-align:center">
             Δώστε το όνομα του κόμματος που θέλετε να ενημερώσετε: <input type="text" name="name"><br>
             Επιλέξτε από τα παρακάτω πεδία ποιά θέλετε να ενημερώσετε:<br>
             Εκλογικό ποσοστό:  <input type="text" name="percent"><br>
@@ -16,5 +18,6 @@
             Περιόδου:          <input type="text" name="b_p"><br>
             <input type="submit" name="case_submit" value="Submit">
         </form>
+        </div>
     </body>
 </html>

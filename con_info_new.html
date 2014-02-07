@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     <title>ΕΙΣΑΓΩΓΗ ΝΕΟΥ ΒΟΥΛΕΥΤΗ</title>
-    <head>ΕΙΣΑΓΩΓΗ ΝΕΟΥ ΒΟΥΛΕΥΤΗ
+    <head>
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
 	</head>
     <body>
-        <form action="con_info_new.php" method="post">
+    	<div id="form" style="position:absolute;top:25%;left:35%;" >
+    		<h3 style="text-align:center">ΕΙΣΑΓΩΓΗ ΝΕΟΥ ΒΟΥΛΕΥΤΗ</h3>
+        <form action="con_info_new.php" method="post" style="text-align: center">
             Όνομα βουλευτή: <input type="text" name="name"><br>
             Ηλικία βουλευτή: <input type="number" name="age"><br>
             Φύλο βουλευτή: <input type="text" name="gender"><br>
@@ -14,5 +16,6 @@
             Ημερομηνία Ανεξαρτητοποίησης: <input type="date" name="ind_date"><br>
             <input type="submit" name="case_submit" value="Submit">
         </form>
+        </div>
     </body>
 </html>

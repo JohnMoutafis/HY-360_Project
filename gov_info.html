@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
     <title>ΕΙΣΑΓΩΓΗ ΝΕΑΣ ΚΥΒΕΡΝΗΣΗΣ</title>
-    <head>ΕΙΣΑΓΩΓΗ ΝΕΑΣ ΚΥΒΕΡΝΗΣΗΣ
+    <head>
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
 	</head>
     <body>
-        <form action="gov_info.php" method="post">
+    	<div id="form" style="position:absolute;top:25%;left:35%;" >
+    		<h3 style="text-align:center">ΕΙΣΑΓΩΓΗ ΝΕΑΣ ΚΥΒΕΡΝΗΣΗΣ</h3>
+        <form action="gov_info.php" method="post" style="text-align:center">
             Όνομα_Κυβέρνησης:    <input type="text" name="name"><br>
             Τίτλος Βουλευτικής<br>
             Περιόδου:            <input type="text" name="b_p"><br>
             Όνομα Πρωθυπουργού:  <input type="text" name="president"><br>
             <input type="submit" name="case_submit" value="Submit">
         </form>
+        </div>
     </body>
 </html>

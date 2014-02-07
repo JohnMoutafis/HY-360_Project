@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     <title>ΕΙΣΑΓΩΓΗ ΝΕΟΥ ΚΟΜΜΑΤΟΣ</title>
-    <head>ΕΙΣΑΓΩΓΗ ΝΕΟΥ ΚΟΜΜΑΤΟΣ
+    <head>
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
 	</head>
     <body>
-        <form action="party_new.php" method="post">
+    	<div id="form" style="position:absolute;top:25%;left:35%;" >
+        	<h3 style="text-align:center">ΕΙΣΑΓΩΓΗ ΝΕΟΥ ΚΟΜΜΑΤΟΣ</h3>
+        <form action="party_new.php" method="post" style="text-align: center">
             Όνομα κομματος: <input type="text" name="name"><br>
             Εκλογικό ποσοστό: <input type="text" name="percent"><br>
             Αριθμός Βουλευτών: <input type="number" name="congresmen"><br>
@@ -15,5 +17,6 @@
             Περιόδου:          <input type="text" name="b_p"><br>
             <input type="submit" name="case_submit" value="Submit">
         </form>
+        </div>
     </body>
 </html>

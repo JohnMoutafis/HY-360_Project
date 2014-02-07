@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
     <title>ΚΟΜΜΑ</title>
-    <head>ΕΝΗΜΕΡΩΣΗ ΠΙΝΑΚΑ ΚΟΜΜΑΤΩΝ
+    <head>
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
 	</head>
   
     <body>
-        <h1>Επιλέξτε από τις παρακάτω επιλογές:</h1><br>
-        Εάν θέλετε να προσθέσετε καινούργιο κόμμα, πατήστε Προσθήκη Νέου.<br>
-        Εάν θέλετε να ενημερώσετε ήδη υπάρχων κόμμα, πατήστε Ενημέρωση Υπάρχοντος.<br>  
+    	<div id="form" style="position:absolute;top:25%;left:25%;" >
+        	<h3 style="text-align:center">ΕΝΗΜΕΡΩΣΗ ΠΙΝΑΚΑ ΚΟΜΜΑΤΩΝ</h3>
+        <h4 style="text-align:center">Εάν θέλετε να προσθέσετε καινούργιο κόμμα, πατήστε Προσθήκη Νέου.</h4><br>
+        <h4 style="text-align:center">Εάν θέλετε να ενημερώσετε ήδη υπάρχων κόμμα, πατήστε Ενημέρωση Υπάρχοντος.</h4><br>  
             
-        <form action="party_update_handler.php" method="post">
+        <form action="party_update_handler.php" method="post" style='text-align: center'>
             <input type="submit" value="Προσθήκη Νέου" name="new"/>
             <input type="submit" value="Ενημέρωση Υπάρχοντος" name="update" />
         </form>
+        </div>
     </body>
 </html>

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
     <title>ΒΟΥΛΕΥΤΙΚΗ ΠΕΡΙΟΔΟΣ</title>
-    <head>ΦΟΡΜΑ ΕΝΗΜΕΡΩΣΗΣ ΒΟΥΛΕΥΤΙΚΗΣ ΠΕΡΙΟΔΟΥ
+    <head>
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
 	</head>
     <body>
-        <form action="b_p_update.php" method="post">
+    	<div id="form" style="position:absolute;top:25%;left:25%;" >
+        	<h3 style="text-align:center">ΦΟΡΜΑ ΕΝΗΜΕΡΩΣΗΣ ΒΟΥΛΕΥΤΙΚΗΣ ΠΕΡΙΟΔΟΥ</h3>
+        <form action="b_p_update.php" method="post" style='text-align: center;'>
             Τίτλος Περιόδου:    <input type="text" name="title"><br>
             Ημερομηνία Έναρξης: <input type="date" name="start_date"><br>
             Ημερομηνία Λήξης:   <input type="date" name="end_date"><br>
             <input type="submit" name="case_submit" value="Submit" />
         </form>
+        </div>
     </body>
 </html>
