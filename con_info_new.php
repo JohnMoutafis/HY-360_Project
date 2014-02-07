@@ -1,6 +1,6 @@
 <?php
     include("Connect/connect_to_database.php");
-    if(!empty($_POST['name']) && !empty($_POST['party']) && !empty($_POST['district'])){
+    if(!empty($_POST['name']) && !empty($_POST['party'])){
         $name = $_POST['name'];
         $age = $_POST['age'];
         $gender = $_POST['gender'];
