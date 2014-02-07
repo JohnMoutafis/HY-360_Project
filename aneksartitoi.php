@@ -16,7 +16,7 @@
 		    //Connect to specific database
 			@mysql_select_db($db_base) or die ("No database");
 			@mysql_query('SET NAMES utf8');
-			if(isset($_POST['independant'])){
+			if($_POST['independant']){
 				$option=$_POST['independant'];
 				$q="SELECT  βουλευτής.Όνομα ,βουλευτής.Ημερ_ανεξαρτητοποίησης FROM βουλευτής 
 						INNER JOIN βουλευτική_περίοδος
@@ -28,9 +28,10 @@
 							<tr><th>Όνομα βουλευτή</th><th>Ημερομηνία ανεξαρτητοποίησης</th></tr>";
 				while($row=mysql_fetch_array($result)){
 					echo"<tr> <td>".$row['Όνομα']." </td> <td>".$row['Ημερ_ανεξαρτητοποίησης']. "</td> </tr>";
-				}
-				
-				
+				}			
+			}
+			else{
+				echo" DOES NOT EXIST";
 			}
 		?>
 		</div>

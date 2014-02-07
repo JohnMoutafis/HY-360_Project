@@ -16,7 +16,11 @@
 			@mysql_select_db($db_base) or die ("No database");
 			@mysql_query('SET NAMES utf8');
 			$result=mysql_query("SELECT count(*) FROM επερώτηση") or die('Invalid query: ' . mysql_error());
-			$nameresult=mysql_query("SELECT περιγραφή FROM επερώτηση WHERE ημερομηνία <= ALL (SELECT Ημ_Λήξης FROM βουλευτική_περίοδος) ORDER BY ημερομηνία") or die('Invalid query: ' . mysql_error());
+			$nameresult=mysql_query("SELECT περιγραφή FROM επερώτηση
+									INNER JOIN βουλευτική_περίοδος
+									ON βουλευτική_περίοδος.Ημ_Λήξης=0000-00-00 AND βουλευτική_περίοδος.Ημ_Έναρξης <= CURDATE() 
+									 AND επερώτηση.ημερομηνία >= βουλευτική_περίοδος.Ημ_Έναρξης
+									 AND επερώτηση.ημερομηνία <= CURDATE() ORDER BY ημερομηνία") or die('Invalid query: ' . mysql_error());
 			$row=mysql_fetch_array($result);
 			echo $row['count(*)']."επερωτήσεις έχουν γίνει στην βουλή";
 			echo "<ol>";
