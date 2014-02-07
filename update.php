@@ -19,24 +19,3 @@
     }
     
 ?>
-
-<html>
-    <head><h1>Επιλέξτε ποιά κατηγορία θέλετε να ενημερώσετε:</h1>
-		<link rel="stylesheet" type="text/css" href="mystyle.css">
-	</head>
-    <body>
-        
-        <br>
-        <form action="update.php" method="post">
-            <select name="cases" >
-                <option value="def" >Επιλέξτε</option>
-                <option value="B_P" >Βουλευτική Περίοδος</option>
-                <option value="Party" >Κόμμα</option>
-                <option value="Con_Info" >Πληροφορίες Βουλευτών</option>
-                <option value="Gov" >Κυβέρνηση</option>
-                <option value="Per_Info" >Πληροφορίες Ατόμων</option>
-            </select> 
-            <input type="submit" name="case_submit" value="Submit" />           
-        </form>    
-    </body>    
-</html>
