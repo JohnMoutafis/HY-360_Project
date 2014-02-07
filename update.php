@@ -8,7 +8,7 @@
             include("party_update.html");
         }
         elseif($case_value=="Con_Info"){
-            echo "Πληροφορίες Βουλευτών";
+            include("con_info.html");
         }
         elseif($case_value=="Gov"){
             echo "Κυβέρνηση";
@@ -23,6 +23,8 @@
 <html>
     <head></head>
     <body>
+        <h1>Επιλέξτε ποιά κατηγορία θέλετε να ενημερώσετε:</h1>
+        <br>
         <form action="update.php" method="post">
             <select name="cases" >
                 <option value="def" >Επιλέξτε</option>

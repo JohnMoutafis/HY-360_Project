@@ -13,5 +13,5 @@
     }
         
     $db->query('SET NAMES utf8');
-    $db->exec('USE hy360;');
+    $db->exec('USE ' . $db_name . ';');
 ?>
