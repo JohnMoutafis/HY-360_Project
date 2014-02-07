@@ -6,15 +6,17 @@
         $gender = $_POST['gender'];
         $party = $_POST['party'];
         $district = $_POST['district'];
+        $ind_date = $_POST['ind_date'];
         
-        $q = "INSERT INTO βουλευτής VALUES (:name, :age, :gender, :party, :district);";
+        $q = "INSERT INTO βουλευτής VALUES (:name, :age, :gender, :party, :district, :ind_date);";
         $query = $db->prepare($q);
         $result = $query->execute(array(
             ":name"      => $name,
             ":age"       => $age,
             ":gender"    => $gender,
             ":party"     => $party,
-            ":district"  => $district
+            ":district"  => $district,
+            ":ind_date"  => $ind_date
         ));
         
         echo "Ο νέος βουλευτής προστέθηκε επιτυχώς!";       

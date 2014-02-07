@@ -30,6 +30,13 @@
             $query = $db->prepare($q);
             $result = $query->execute(array($district, $name));
         }
+        if(!empty($_POST['ind_date'])){
+            $ind_date = $_POST['ind_date'];
+          
+            $q = "UPDATE βουλευτής SET Ημερ_ανεξαρτητοποίησης=? WHERE Όνομα=?;";
+            $query = $db->prepare($q);
+            $result = $query->execute(array($ind_date, $name));
+        }
         
         echo "Η ενημέρωση έγινε επιτυχώς!";
     }
