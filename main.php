@@ -12,7 +12,7 @@
 	   		include("Connect/connect_to_database.php");
        		echo "Συνδεθήκατε επιτυχώς στη βάση δεδομένων: $db_name";
 		?>
-		<p>
+		<p style="text-align:center">
 		     Αυτή είναι η επίλυση του project 2013-2014<br>
 		     από την ομάδα 8<br><br>
 		     Αγαθάγγελος Γιάννης<br>
@@ -20,7 +20,7 @@
 		     Μουτάφης Γιάννης<br><br>
 			 Τι θέλετε να κάνετε;
 		</p>
-		<form action="auxiliary_main_option_handler.php" method="post">
+		<form action="auxiliary_main_option_handler.php" method="post" style="text-align:center">
 	   	 	<input type="submit" value="Ενημέρωση" name="update"/>
 	  	  	<input type="submit" value="Αναζήτηση" name="query" />
 		</form>
