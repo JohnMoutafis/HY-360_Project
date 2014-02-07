@@ -1,9 +1,11 @@
-<html
+<html>
+	<title>Αναζητήσεις</title>
 	<head></head>
+	
 	<body>
 		<div id="form" style="position:absolute;top:25%;left:35%;">
-		<?php
-			$db_host = "localhost";
+	<?php
+	   		$db_host = "localhost";
 			$db_username = "root";
 			$db_pass = "";
 			$db_base = "hy360";
@@ -13,11 +15,13 @@
 		    //Connect to specific database
 			@mysql_select_db($db_base) or die ("No database");
 			@mysql_query('SET NAMES utf8');
-			$option= $_POST["voul_periodos"]; 
-			echo"<h3 style='text-align: center'>Επιλέξτε Κυβέρνηση: </h3>";
-			echo"<form action='ipourgoi.php' method='post'>";
+	?>
+		<h3 style="text-align: center">Αναζήτηση Υπουργών.</h3>
+		<h3 style="text-align: center">Επιλέξτε Κυβέρνηση: </h3>
+		<?php
+				echo"<form action='per_ip.php' method='post'>";
 
-				echo"<select name='κυβέρνησεις'>";
+				echo"<select name='kivernisi'>";
 					$result = mysql_query("SELECT * FROM κυβέρνηση");
 					if(!$result){
 						die('Invalid query: ' . mysql_error());
@@ -29,8 +33,9 @@
 				echo"</select>";
 
 				echo "<input type='submit'>";
-			echo"</form>";
-		?>
+				echo"</form>";
+			?>
 		</div>
 	</body>
 </html>
+	

@@ -1,6 +1,7 @@
 <html>
 	<title>Αναζήτηση βουλευτών</title>
 	<body>
+		<div id="form" style="position:absolute;top:25%;left:35%;">
 		<?php
 			$db_host = "localhost";
 			$db_username = "root";
@@ -24,5 +25,6 @@
 							WHERE επερώτηση.κατηγορία =ANY(SELECT Όνομα_Κατηγορίας FROM θεματική_κατηγορία)y)x)") or die('Invalid query: ' . mysql_error());
 			
 		?>
+		</div>
 	</body>
 </html>

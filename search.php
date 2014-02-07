@@ -1,6 +1,8 @@
 <html
 	<head></head>
 	<body>
+		<div id="form" style="position:absolute;top:25%;left:35%;">
+			<h3 style='text-align: center'>Επιλέξτε</h3>
 		<?php
 			$db_host = "localhost";
 			$db_username = "root";
@@ -42,6 +44,7 @@
 				echo " DOES NOT EXIST ";
 			}
 		?>
+		</div>
 	</body>
 
 </html>

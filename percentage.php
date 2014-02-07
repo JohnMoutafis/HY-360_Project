@@ -1,7 +1,8 @@
-<body>
+
 	<html>
 		<title>Ποσόστωση βουλευτών</title>
 		<head></head>
+		<div id="form" style="position:absolute;top:25%;left:35%;">
 		<body>
 			<?php
 				$db_host = "localhost";
@@ -62,5 +63,5 @@
 			
 			?>
 		</body>
+		</div>
 	</html>
-</body>

@@ -3,6 +3,6 @@
         include "update.php";
     }
     elseif(isset($_POST["query"])){
-        include "query.php";
+        include "newquery.php";
     }
 ?>

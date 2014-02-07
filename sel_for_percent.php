@@ -3,7 +3,7 @@
 	<head>
 	</head>
 	<body>
-		
+	<div id="form" style="position:absolute;top:25%;left:35%;">
 		<?php
 			$db_host = "localhost";
 			$db_username = "root";
@@ -43,5 +43,6 @@
 			}
 		 
 		?>
+		</div>
 	</body>
 </html>
