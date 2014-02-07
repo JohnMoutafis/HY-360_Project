@@ -106,6 +106,19 @@
 
 			<input type='submit'>
 		</form>
+		<h3>Ανεξάρτητοι βουλευτές</h3>
+		<?php
+			$result=mysql_query("SELECT Τίτλος FROM βουλευτική_περίοδος");
+			echo"<form action='aneksartitoi.php' method='post''>";
+			echo "<select name='independant'>
+					<option selected='selected'></option>";
+			while($row=mysql_fetch_array($result)){
+				echo"<option value=".$row['Τίτλος'].">".$row['Τίτλος']."</option>";
+			}
+			echo"</select>";
+			echo "<input type='submit'>";
+			echo"</form>";
+		?>
 	</body>
 </html>
 	
